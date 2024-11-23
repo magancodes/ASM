@@ -1,32 +1,23 @@
-;NAME- 		Moulik Jain
-;Roll Number- 	2201CS49
-;Decaration of Authorship 
-;Program to find the minimum value in an array
 loop: ldc count
 ldnl 0
 brlz done
 ldc array
 add
 ldnl 0
-ldc mini
+ldc sum
 ldnl 0
-sub
-brlz update
+add
+ldc sum
+stnl 0
 ldc count
 ldnl 0
 adc -1
 ldc count
 stnl 0
 br loop
-update: ldc mini
-ldnl 0
-add
-ldc mini
-stnl 0
-br loop
 done: HALT
-mini: data 0xFFFFFF
-count: data 9
+sum:   data 0
+count: data 9 
 array: data 6
 data 4 
 data 7 
@@ -37,4 +28,3 @@ data 9
 data 2
 data 1 
 data 3
-
